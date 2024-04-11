@@ -1,0 +1,20 @@
+# 一个postgres服务
+# 一个数据库连接服务
+version: '3.1'
+services:
+  db:
+    image: postgres
+    volumes:
+       - ./postgres:/var/lib/postgresql/data
+    restart: always
+    ports:
+      - 5434:5432
+    environment:
+      - POSTGRES_USER=myuser
+      - POSTGRES_PASSWORD=mypassword
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8089:8080

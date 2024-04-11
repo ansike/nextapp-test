@@ -34,3 +34,17 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+## 开发中修改 schema 迁移数据
+
+1. 修改文件 schema.prisma
+2. 执行 migrate 命令
+
+```shell
+yarn migrate --name xxx
+```
+
+## 生产中修改 schema 迁移数据
+
+1. 修改文件 schema.prisma
+2. 生产环境执行 `npx prisma migrate deploy`
