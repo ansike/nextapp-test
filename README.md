@@ -35,6 +35,12 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 
+## 启动本地的 postgres
+
+```shell
+docker-compose up
+```
+
 ## 开发中修改 schema 迁移数据
 
 1. 修改文件 schema.prisma
